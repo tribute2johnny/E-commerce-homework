@@ -10,22 +10,19 @@ import Basket from "../Components/Basket";
 
 const MainContainer = () => {
     const [products, setProducts] = useState(gamesForSale);
-    const [selectedPurchase, setSelectedPurchase] = useState(null);
     const [basket, setBasket] = useState([])
 
 
 
-    const addToBasket = () => {
+    const addToBasket = (product) => {
             let newBasket = [...basket];
-            newBasket.push(selectedPurchase)
+            newBasket.push(product)
             setBasket(newBasket)
         
        
     }
 
-    useEffect(() => {
-        setSelectedPurchase()
-    }, [])
+
 
 
 
@@ -36,8 +33,8 @@ const MainContainer = () => {
     
     return (
         <div>
-        <ProductList products={products} addToBasket={addToBasket} setSelectedPurchase={setSelectedPurchase}/>
-        <Basket  basket={basket} setSelectedPurchase={setSelectedPurchase}/>
+        <ProductList products={products} addToBasket={addToBasket} />
+        <Basket  basket={basket} />
         </div>
 
     )

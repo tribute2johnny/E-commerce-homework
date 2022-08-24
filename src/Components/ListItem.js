@@ -3,7 +3,7 @@ import React from "react";
 const ListItem = ({product, addToBasket}) => {
 
     const handleAddClick = () => {
-        addToBasket()
+        addToBasket(product)
     }
 
 

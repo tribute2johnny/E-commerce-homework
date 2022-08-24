@@ -6,14 +6,18 @@ const Basket = ({basket}) => {
         //     setSelectedPurchase(basket[event.target.value])
         // }
 
-        // const basketNodes = 
+         const basketNodes = basket.map((product) => {
+
+            return <p>{product.name}</p>               
+      
+         })
 
     
 
     return (
 
        <>
-        {/* {productBasket} */}
+        {basketNodes}
        </>
    
     )
