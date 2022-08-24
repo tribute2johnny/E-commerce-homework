@@ -32,10 +32,16 @@ const MainContainer = () => {
     
     
     return (
-        <div>
-        <ProductList products={products} addToBasket={addToBasket} />
-        <Basket  basket={basket} />
-        </div>
+
+        <>
+            <section id="product-list-container">
+                <ProductList products={products} addToBasket={addToBasket} />
+            </section>
+                
+            <section id="basket-container">
+                {basket.length > 0 ? <Basket  basket={basket} /> : <div>add to basket pls my family are starving</div>}
+            </section>
+        </>
 
     )
 
